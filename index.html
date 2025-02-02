@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSD Fitness - Your Path to Fitness Excellence</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        #classes {
+            font-family: 'sakana';
+            margin: 0; /* Ensure no margin for seamless transition */
+        }
+        #classes h2, .memberships h2 {
+            font-family: 'sakana';
+            color: white;
+        }
+        #classes h3 {
+            font-family: 'sakana';
+        }
+        .a {
+            font-family: 'Poppins', sans-serif;
+        }
+        #cardio, #personal-training {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            margin: 0 auto;
+            max-width: 300px; /* added max-width to center the cards */
+        }
+        .class-card {
+            width: 300px; /* Adjusted width */
+            margin: 20px; /* Increased margin for better spacing */
+            padding: 20px; /* Increased padding for better content spacing */
+            text-align: center; /* Center text within the card */
+        }
+        .classes-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Changed to grid layout for better alignment */
+            gap: 20px; /* Added gap for better spacing */
+            justify-content: center;
+        }
+        .classes{
+            background: 
+        linear-gradient(to top, 
+            rgba(0, 0, 0, 0.95) 0%,
+            rgba(0, 0, 0, 0.8) 40%,
+            rgba(147, 0, 2, 0.8) 100%
+        ),
+        url('../assets/hero-bg.webp') no-repeat center center/cover;
+            margin: 0; /* Ensure no margin for seamless transition */
+            padding: 20px; /* Optional padding for content */
+        }
+        .memberships {
+            background: 
+        linear-gradient(to bottom, 
+            rgba(0, 0, 0, 0.95) 0%,
+            rgba(0, 0, 0, 0.8) 40%,
+            rgba(147, 0, 2, 0.8) 100%
+        ),
+        url('../assets/hero-bg.webp') no-repeat center center/cover;
+            margin: 0; /* Ensure no margin for seamless transition */
+            padding: 20px; /* Optional padding for content */
+        }
+        #gym {
+            margin-bottom: 0; /* Remove bottom margin */
+        }
+        #classes {
+            margin-top: 0; /* Remove top margin */
+             /* Optional: Add a border to blend with gym section */
+        }
+        .class-card h3 {
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition */
+}
+
+.class-card:hover h3 {
+    color: red; /* Change color to red on hover */
+    text-decoration: underline; /* Underline text on hover */
+}
+
+.class-card {
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+     <!-- Loading Animation -->
+     <div class="loading-overlay">
+        <div class="loading-content">
+            <img src="./assets/logo.png" alt="MSD Fitness Logo" class="loading-logo">
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Header Section -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#home">
+                    <img src="./assets/logo.png" alt="MSD Fitness Logo">
+                </a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#gym">Gym</a></li>
+                <li><a href="#classes">Classes</a></li>
+                <li><a href="#memberships">Memberships</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Transform Your Life</h1>
+            <p>Join MSD Fitness and embark on your fitness journey today</p>
+            <a href="#contact" class="cta-button">Join Us Today</a>
+        </div>
+    </section>
+
+    <!-- Gym Section -->
+    <section id="gym" class="gym">
+        <h2>Our Facilities</h2>
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide">
+                        <img src="./assets/facilities/gym-1.jpg" alt="Weight Training Area" loading="lazy">
+                    </div>
+                    <div class="slide">
+                        <img src="./assets/facilities/gym-2.jpg" alt="Cardio Zone" loading="lazy">
+                    </div>
+                    <div class="slide">
+                        <img src="./assets/facilities/gym-3.jpg" alt="Free Weights Section" loading="lazy">
+                    </div>
+                    <div class="slide">
+                        <img src="./assets/facilities/gym-4.jpg" alt="Functional Training Area" loading="lazy">
+                    </div>
+                    <div class="slide">
+                        <img src="./assets/facilities/gym-5.jpg" alt="Yoga Studio" loading="lazy">
+                    </div>
+                    <div class="slide">
+                        <img src="./assets/facilities/gym-6.jpg" alt="Stretching Area" loading="lazy">
+                    </div>
+                    <div class="slide">
+                        <img src="./assets/facilities/gym-7.jpg" alt="CrossFit Zone" loading="lazy">
+                    </div>
+                    <div class="slide">
+                        <img src="./assets/facilities/gym-8.jpg" alt="Power Lifting Platform" loading="lazy">
+                    </div>
+                    <div class="slide">
+                        <img src="./assets/facilities/gym-9.jpg" alt="Group Exercise Room" loading="lazy">
+                    </div>
+                    <div class="slide">
+                        <img src="./assets/facilities/gym-10.jpg" alt="Spinning Studio" loading="lazy">
+                    </div>
+                    <div class="slide">
+                        <img src="./assets/facilities/gym-11.jpg" alt="Boxing Area" loading="lazy">
+                    </div>
+                    <div class="slide">
+                        <img src="./assets/facilities/gym-12.jpg" alt="Recovery Zone" loading="lazy">
+                    </div>
+                    <div class="slide">
+                        <img src="./assets/facilities/gym-13.jpg" alt="Locker Room" loading="lazy">
+                    </div>
+                    <div class="slide">
+                        <img src="./assets/facilities/gym-14.jpg" alt="Protein Bar" loading="lazy">
+                    </div>
+                    <div class="slide">
+                        <img src="./assets/facilities/gym-15.jpg" alt="Reception Area" loading="lazy">
+                    </div>
+                </div>
+                <button class="slider-button prev" aria-label="Previous slide">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="slider-button next" aria-label="Next slide">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            <div class="slider-dots"></div>
+        </div>
+    </section>
+
+    <!-- Classes Section -->
+    <section id="classes" class="classes">
+        <h2>Our Classes</h2>
+        <div class="classes-grid">
+            <div class="class-card" id="group-workout">
+                <i class="fas fa-dumbbell"></i>
+                <h3>Group Workout</h3>
+                <p class="a">Improve strength and endurance with functional movements</p>
+            </div>
+            <div class="class-card" id="dumbbells-workout">
+                <i class="fas fa-weight-hanging"></i>
+                <h3>Dumbbells Workout</h3>
+                <p class="a">Build muscle and improve overall fitness</p>
+            </div>
+            <div class="class-card" id="crossfit-workout">
+                <i class="fas fa-pray"></i>
+                <h3>CrossFit Workout</h3>
+                <p class="a">Enhance flexibility, balance, and mental focus</p>
+            </div>
+            <div class="class-card" id="stick-workout">
+                <i class="fas fa-running"></i>
+                <h3>Stick Workout</h3>
+                <p class="a">Boost metabolism and burn calories efficiently</p>
+            </div>
+            <div class="class-card" id="cardio">
+                <i class="fas fa-running"></i>
+                <h3>Cardio</h3>
+                <p class="a">Boost metabolism and burn calories efficiently</p>
+            </div>
+            <div class="class-card" id="personal-training">
+                <i class="fas fa-running"></i>
+                <h3>Personal Training</h3>
+                <p class="a">Boost metabolism and burn calories efficiently</p>
+            </div>
+        </div>
+    </section>
+    
+
+
+    <!-- Memberships Section -->
+    <section id="memberships" class="memberships">
+        <h2>Membership Plans</h2>
+        <div class="plans-grid">
+            <div class="plan-card">
+                <h3>YEARLY</h3>
+                <div class="price">5999 Rs</div>
+                <div class="a">Access to all facilities, Unlimited classes, Personalized coaching</div>
+            </div>
+            <div class="plan-card">
+                <h3>6 MONTHS</h3>
+                <div class="price">3999 Rs</div>
+                <div class="a">Access to all facilities, Unlimited classes, Personalized coaching</div>
+            </div>
+            <div class="plan-card">
+                <h3>3 MONTHS</h3>
+                <div class="price">1999 Rs</div>
+                <div class="a">Access to all facilities, Unlimited classes, Personalized coaching</div>
+            </div>
+            <div class="plan-card">
+                <h3>1 MONTH</h3>
+                <div class="price">999 Rs</div>
+                <div class="a">Access to all facilities, Unlimited classes, Personalized coaching</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>What Our Members Say</h2>
+        <div class="testimonial-carousel">
+            <!-- Testimonials will be added dynamically -->
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">What equipment do you have?</div>
+                <div class="faq-answer">We offer state-of-the-art cardio and strength training equipment, free weights, and specialized zones for different workout styles.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Do you offer personal training?</div>
+                <div class="faq-answer">Yes, we have certified personal trainers available for one-on-one sessions. Contact us for more information.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Can I freeze my membership?</div>
+                <div class="faq-answer">Yes, you can freeze your membership for up to 3 months per year with valid reason.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>123 Fitness Street, Gym City, GC 12345</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <p>+1 234 567 8900</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>info@msdfitness.com</p>
+                </div>
+                <div class="working-hours">
+                    <h3><i class="fas fa-clock"></i> Working Hours</h3>
+                    <ul>
+                        <li><span>Monday - Friday:</span> 5:00 AM - 11:00 PM</li>
+                        <li><span>Saturday:</span> 6:00 AM - 10:00 PM</li>
+                        <li><span>Sunday:</span> 7:00 AM - 8:00 PM</li>
+                    </ul>
+                </div>
+                <div class="social-links">
+                    <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d0!2d0!3d0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMMKwMDAnMDAuMCJOIDDCsDAwJzAwLjAiRQ!5e0!3m2!1sen!2sus!4v1234567890" 
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 MSD Fitness. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
